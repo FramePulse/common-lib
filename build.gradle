@@ -1,0 +1,34 @@
+plugins {
+	id 'java'
+	id 'java-library'
+	id 'maven-publish'
+}
+
+group = 'com.framepulse'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(21)
+	}
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+subprojects {
+
+	repositories {
+		mavenCentral()
+		mavenLocal()
+	}
+
+	publishing {
+		repositories {
+			mavenLocal()
+		}
+	}
+}

@@ -1,0 +1,4 @@
+rootProject.name = 'common-libs'
+include 'common-lib'
+include 'jpa-common-lib'
+include 'cassandra-common-lib'
